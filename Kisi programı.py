@@ -52,5 +52,28 @@ while True:
     elif(işlem=="5"):
         print("Program Sonlandırıldı.")
         break
-               
+    elif(işlem=="6"):
+        aranacak_isim=input("İsmi Giriniz:")
+        bulunan_kişiler=[]
+        for kişi in kişiler:
+            if(kişi[0]==aranacak_isim):
+                bulunan_kişiler.append(kişi)
+        if(len(bulunan_kişiler)==0):
+            print("Böyle bir kişi bulunamadı")
+        else:
+            for bulunan_kişi in bulunan_kişiler:
+                print(" Adınız: {}\n Soyadınız : {}\n Mesleğiniz : {}\n Tc : {} ".format(bulunan_kişi[0],bulunan_kişi[1],bulunan_kişi[2],bulunan_kişi[3]))
+    elif(işlem=="7"):
+        aranacak_meslek=input("Mesleği Giriniz:")
+        bulunan_meslekler=[]
+        for kişi in kişiler:
+            if(kişi[2]==aranacak_meslek):
+                bulunan_meslekler.append(kişi)
+        if(len(bulunan_meslekler)==0):
+            print("Böyle bir kişi bulunamadı")
+        else:
+            for bulunan_meslek in bulunan_meslekler:
+                print(" Adınız: {}\n Soyadınız : {}\n Mesleğiniz : {}\n Tc : {} ".format(bulunan_meslek[0],bulunan_meslek[1],bulunan_meslek[2],bulunan_meslek[3]))
+             
+        
         
