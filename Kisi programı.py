@@ -7,6 +7,7 @@ print("""**********************************
 5-Program sonu
 6-Kişi ismi ile kullanıcıları sıralama
 7-Meslek ismi ile kullanıcıları sıralama
+8-İsim ve Soyad ile kullanıcıları sıralama
 **************************************************""")
 ad = ""
 soyad=""
@@ -75,6 +76,19 @@ while True:
         else:
             for bulunan_meslek in bulunan_meslekler:
                 print(" Adınız: {}\n Soyadınız : {}\n Mesleğiniz : {}\n Tc : {} ".format(bulunan_meslek[0],bulunan_meslek[1],bulunan_meslek[2],bulunan_meslek[3]))
-             
-        
+    elif(işlem=="8"):
+        aranacak_isim=input("İsminizi Giriniz:")
+        arnacak_soyisim=input("Soyadınızı Giriniz:")
+        bulunann_kişiler=[]
+      
+        for kişi in kişiler:
+            if(kişi[0]==aranacak_isim and kişi[1]==arnacak_soyisim):
+                bulunann_kişiler.append(kişi)
+        if(len(bulunann_kişiler)==0):
+            print("Böyle bir kişi bulunamadı")
+        else:
+            for bulunann_kişi in bulunann_kişiler:
+                    print("Adı : {}\n Soyadı:{}\n Meslek : {}\n Tc:{}".format(bulunann_kişi[0],bulunann_kişi[1],bulunann_kişi[2],bulunann_kişi[3]))
+                          
+
         
