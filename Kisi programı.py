@@ -21,11 +21,25 @@ while True:
         soyad=input("Soyadınızı giriniz ")
         meslek=input("Mesleğinizi Giriniz ")
         tc=int(input("Tcnizi Giriniz "))
-        bilgiler=[ad,soyad,meslek,tc]
-        kişiler.append(bilgiler)
-        print(" Adınız: {}\n Soyadınız : {}\n Mesleğiniz : {}\n Tc : {} ".format(bilgiler[0],bilgiler[1],bilgiler[2],bilgiler[3]))
-        print("kişi eklendi")
-        bilgiler=[]
+        if(len(kişiler)==0):
+            bilgiler=[ad,soyad,meslek,tc]
+            kişiler.append(bilgiler)
+            print(" Adınız: {}\n Soyadınız : {}\n Mesleğiniz : {}\n Tc : {} ".format(bilgiler[0],bilgiler[1],bilgiler[2],bilgiler[3]))
+            print("kişi eklendi")
+            bilgiler=[]
+        else: 
+            for kişi in kişiler:
+                if(kişi[3]==tc):
+                    print("Böyle bi tc mevcut")
+                    break
+                else:
+                    bilgiler=[ad,soyad,meslek,tc]
+                    kişiler.append(bilgiler)
+                    print(" Adınız: {}\n Soyadınız : {}\n Mesleğiniz : {}\n Tc : {} ".format(bilgiler[0],bilgiler[1],bilgiler[2],bilgiler[3]))
+                    print("kişi eklendi")
+                    bilgiler=[]
+                    break
+
     elif(işlem=="2"):
         if(len(kişiler)==0):
             print("Listenecek kişi bulunamadı")
