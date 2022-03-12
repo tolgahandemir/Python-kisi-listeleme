@@ -5,7 +5,8 @@ print("""**********************************
 3-Aranılan kişiye ait bilgileri listeleme
 4-Aranılan kişiye ait bilgileri silme
 5-Program sonu
-      
+6-Kişi ismi ile kullanıcıları sıralama
+7-Meslek ismi ile kullanıcıları sıralama
 **************************************************""")
 ad = ""
 soyad=""
