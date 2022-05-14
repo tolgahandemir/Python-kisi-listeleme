@@ -103,6 +103,16 @@ while True:
         else:
             for bulunann_kişi in bulunann_kişiler:
                     print("Adı : {}\n Soyadı:{}\n Meslek : {}\n Tc:{}".format(bulunann_kişi[0],bulunann_kişi[1],bulunann_kişi[2],bulunann_kişi[3]))
-                          
+    elif (işlem == "9"):
+        aranacak_tc = int(input("Tcnizi giriniz"))
+        bulunann_tcler = []
 
-        
+        for kişi in kişiler:
+            if (kişi[3] == aranacak_tc):
+                bulunann_tcler.append(kişi)
+        if (len(bulunann_tcler) == 0):
+            print("Böyle bir tc bulunamadı")
+        else:
+            for bulunan_tc in bulunann_tcler:
+                print("Adı : {}\n Soyadı : {}\n Mesleği : {}\n Tc : {}".format(bulunan_tc[0], bulunan_tc[1],
+                                                                               bulunan_tc[2], bulunan_tc[3]))
