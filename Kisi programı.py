@@ -8,6 +8,7 @@ print("""**********************************
 6-Kişi ismi ile kullanıcıları sıralama
 7-Meslek ismi ile kullanıcıları sıralama
 8-İsim ve Soyad ile kullanıcıları sıralama
+9-Tc numarasına göre kullanıcı bulma
 **************************************************""")
 ad = ""
 soyad=""
